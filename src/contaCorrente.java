@@ -19,39 +19,42 @@ public class contaCorrente {
     System.out.println("2 - Sacar");
     System.out.println("3 - Depositar");
     System.out.println("4 - Sair do sistema");
-    System.out.println("Digite o número correspondente a sua opção:");  
+    System.out.println("Digite o número correspondente a sua opção: ");  
     escolha = leitor.nextInt();
     
     switch(escolha){
         case(1):
-        System.out.println("Seu saldo é" + saldo);
+        System.out.println("Seu saldo é " + saldo);
+        System.out.println("");
         break;
         
         case(2):
         System.out.println("Seu saldo é " + saldo);
         System.out.println("Para o saque, será cobrado uma taxa de 0,5%.");
-        System.out.println("Digite o valor que você deseja sacar:");
+        System.out.println("Digite o valor que você deseja sacar: ");
 
         saque = leitor.nextDouble();
         
         saque = saque * 1.05;
         saldo = saldo - saque;
         
-        System.out.println("Taxa aplicada");
+        System.out.println("O valor do seu saque somado a taxa é de " + saque);
         System.out.println("Seu saldo é " + saldo);
+        System.out.println("");
         break;
         
         case (3):
         System.out.println("Seu saldo é " + saldo);
         System.out.println("Digite o valor que você deseja depositar:");
         deposito = leitor.nextDouble();
-
         saldo = saldo + deposito;
-        System.out.println("Depósito realizado, o saldo total é:" + saldo);
+        System.out.println("Depósito realizado, o saldo total é: " + saldo);
+        System.out.println("");
         break;
 
         case(4):
         System.out.println("Fim do programa");
+        System.out.println("");
         break;
   
         }
